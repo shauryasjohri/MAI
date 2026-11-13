@@ -1,0 +1,22 @@
+# macOS system files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+Frontend/dist/
+Backend/dist/
+
+# Test output
+coverage/
+
+# Environment variables (keep examples)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*

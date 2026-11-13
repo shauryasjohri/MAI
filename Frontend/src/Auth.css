@@ -1,0 +1,230 @@
+.authPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 24px;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(79, 70, 229, 0.14), transparent 45%);
+}
+
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  background: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+body.light-mode .authCard {
+  background: var(--light-bg-primary);
+  border-color: var(--light-border);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.authBrand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.authBrand i {
+  font-size: 28px;
+  color: var(--dark-accent);
+}
+
+body.light-mode .authBrand i {
+  color: var(--light-accent);
+}
+
+.authBrand h1 {
+  font-size: 26px;
+  margin-top: 10px;
+  letter-spacing: -0.02em;
+}
+
+.authBrand p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--dark-text-secondary);
+}
+
+body.light-mode .authBrand p {
+  color: var(--light-text-secondary);
+}
+
+.authTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 5px;
+  border-radius: 12px;
+  background: var(--dark-bg-tertiary);
+  margin-bottom: 22px;
+}
+
+body.light-mode .authTabs {
+  background: var(--light-bg-secondary);
+}
+
+.authTab {
+  padding: 10px 12px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-text-secondary);
+}
+
+body.light-mode .authTab {
+  color: var(--light-text-secondary);
+}
+
+.authTab.active {
+  background: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .authTab.active {
+  background: var(--light-bg-primary);
+  color: var(--light-text-primary);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.authField {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-text-secondary);
+}
+
+body.light-mode .authField {
+  color: var(--light-text-secondary);
+}
+
+.authField input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--dark-border);
+  background: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  font-size: 14px;
+  outline: none;
+}
+
+body.light-mode .authField input {
+  border-color: var(--light-border);
+  background: var(--light-bg-primary);
+  color: var(--light-text-primary);
+}
+
+.authField input:focus {
+  border-color: var(--dark-accent);
+}
+
+.authError {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #ef4444;
+}
+
+.authSubmit {
+  margin-top: 4px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--dark-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.authSubmit:hover:not(:disabled) {
+  background: var(--dark-accent-hover);
+}
+
+.authSubmit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.authDivider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 14px;
+  color: var(--dark-text-secondary);
+  font-size: 12px;
+}
+
+body.light-mode .authDivider {
+  color: var(--light-text-secondary);
+}
+
+.authDivider::before,
+.authDivider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--dark-border);
+}
+
+body.light-mode .authDivider::before,
+body.light-mode .authDivider::after {
+  background: var(--light-border);
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--dark-border);
+  background: transparent;
+  color: var(--dark-text-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+body.light-mode .googleBtn {
+  border-color: var(--light-border);
+  color: var(--light-text-primary);
+}
+
+.googleBtn:hover {
+  border-color: var(--dark-accent);
+}
+
+.googleBtn i {
+  color: #ea4335;
+}
+
+.authHint {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--dark-text-secondary);
+}
+
+body.light-mode .authHint {
+  color: var(--light-text-secondary);
+}
